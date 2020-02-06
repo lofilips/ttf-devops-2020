@@ -1,10 +1,10 @@
-FROM node:alpine
+FROM nodejs:alpine
 
 COPY server.js /app/
 
 COPY package.json /app/
 
-WORKDIR /app
+WORKDIR /app/
 
 RUN npm install
 
