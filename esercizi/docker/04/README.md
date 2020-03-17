@@ -9,9 +9,9 @@ Definire un'immagine Docker tramite ```Dockerfile``` che soddisfa i seguenti req
 - come comportamento di default esegua il comando ```node /app/index.js```
 
 ## Test di Accettazione
-Sono definiti i seguenti testi di accettazione:
+Sono definiti i seguenti test di accettazione:
 - should use Alpine GNU/Linux distribition
-- should contains the base layout plus **app** folder
+- should contain the base layout plus **app** folder
 - should **app** folder contains only **index.js**
 - should execute the **index.js** file using the nodejs interpreter
 - should execute the external command
