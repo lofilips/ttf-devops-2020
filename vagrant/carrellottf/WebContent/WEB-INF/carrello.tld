@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd ">
+	<tlib-version>1.0</tlib-version>
+	<short-name>Example TLD</short-name>
+
+	<tag>
+		<name>hello</name>
+		<tag-class>carrellottf.web.HelloTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+
+	<tag>
+		<name>welcome</name>
+		<tag-class>carrellottf.web.WelcomeTag</tag-class>
+		<attribute>
+			<name>utenteDaSalutare</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>n</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>carrello</name>
+		<tag-class>carrellottf.web.CarrelloTag</tag-class>
+		<attribute>
+			<name>carrello</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>addUrl</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>prodotto</name>
+		<tag-class>carrellottf.web.ProdottoTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>removeUrl</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+
+
+</taglib>

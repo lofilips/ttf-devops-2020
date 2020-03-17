@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/cars"
+	xmlns:tns="http://www.example.org/cars" elementFormDefault="qualified">
+
+    <element name="stock">
+    	<complexType>
+    		<sequence>
+    			<element name="brand" minOccurs="0" maxOccurs="unbounded">
+    				<complexType>
+    					<attribute name="name" type="string" use="required"></attribute>
+    					<attribute name="id" type="ID" use="required"></attribute>
+    				</complexType>
+    			</element>
+    			<element name="car" minOccurs="0" maxOccurs="unbounded">
+    				<complexType><sequence>
+    						<element name="setup">
+    							<complexType mixed="true">
+    								<sequence>
+    									<element name="important"
+    										type="string" minOccurs="1" maxOccurs="3">
+    									</element>
+    								</sequence>
+    							</complexType>
+    						</element>
+    					</sequence>
+    					<attribute name="plate" type="ID" use="required"></attribute>
+    					<attribute name="brand" type="IDREF"></attribute>
+    					<attribute name="price" type="positiveInteger"></attribute>
+    				</complexType>
+    			</element>
+    		</sequence>
+    	</complexType>
+    </element>
+</schema>
